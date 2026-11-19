@@ -1,0 +1,8 @@
+{
+  "projects": [
+    {"name": "Operon", "slug": "operon", "type": "Independent Project", "description": "Placeholder — project details to be added.", "github": null, "liveUrl": null, "technologies": [], "image": null},
+    {"name": "Novora", "slug": "novora", "type": "Independent Project", "description": "Placeholder — project details to be added.", "github": null, "liveUrl": null, "technologies": [], "image": null},
+    {"name": "TallyFlow", "slug": "tallyflow", "type": "Independent Project", "description": "Placeholder — project details to be added.", "github": null, "liveUrl": null, "technologies": [], "image": null},
+    {"name": "ChurnDesk", "slug": "churndesk", "type": "Independent Project", "description": "Placeholder — project details to be added.", "github": null, "liveUrl": null, "technologies": [], "image": null}
+  ]
+}

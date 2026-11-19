@@ -1,0 +1,17 @@
+{
+  "name": "Chibueze Williams",
+  "fullName": "Chibueze Williams Obodo",
+  "role": "Full-Stack Software Engineer",
+  "email": "pricelesswilliams1234@gmail.com",
+  "github": "https://github.com/ChibuezeWilly",
+  "bio": "I'm a Full-Stack Developer with a strong passion for creating seamless digital experiences. I enjoy building things that are not only functional but also meaningful.",
+  "availableForWork": true,
+  "statistics": [
+    {"value": "2+", "label": "Years of Experience", "icon": "Clock"},
+    {"value": "15+", "label": "Technologies", "icon": "Code"},
+    {"value": "6,000+", "label": "Hours of Coding", "icon": "Coffee"},
+    {"value": "6+", "label": "Projects Completed", "icon": "Briefcase"},
+    {"value": "2", "label": "Products Launched", "icon": "Rocket"},
+    {"value": "2,000+", "label": "Customers Supported", "icon": "Users"}
+  ]
+}

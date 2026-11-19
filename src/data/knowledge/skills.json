@@ -1,0 +1,11 @@
+{
+  "categories": [
+    {"name": "Frontend", "technologies": ["JavaScript", "TypeScript", "React", "Next.js", "HTML", "CSS", "Tailwind CSS"]},
+    {"name": "Backend", "technologies": ["Python", "FastAPI", "Node.js", "REST APIs"]},
+    {"name": "Databases", "technologies": ["PostgreSQL", "Redis", "MongoDB", "Prisma"]},
+    {"name": "Authentication", "technologies": ["JWT", "OAuth", "Firebase Authentication"]},
+    {"name": "Deployment", "technologies": ["Vercel", "Docker", "Git", "GitHub Actions"]},
+    {"name": "Payments", "technologies": ["Stripe", "PayPal"]},
+    {"name": "Other", "technologies": ["LangGraph"]}
+  ]
+}
