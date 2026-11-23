@@ -268,7 +268,7 @@ export function AiPanel({ project, onClose, initialMode = 'chat' }: AiPanelProps
                       Want to inquire directly?
                     </span>
                     <a
-                      href="mailto:mailtopricelesswilliams@gmail.com"
+                      href="mailto:pricelesswilliams1234@gmail.com"
                       className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#FF6A00] text-white text-xs font-semibold hover:bg-[#FF8533] transition-colors"
                     >
                       <Mail className="w-3.5 h-3.5" />

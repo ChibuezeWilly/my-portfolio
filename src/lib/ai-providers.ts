@@ -25,7 +25,7 @@ ${JSON.stringify(project || {}, null, 2)}
 
 GLOBAL PORTFOLIO KNOWLEDGE:
 Owner: Chibueze Williams (Full-Stack Software Engineer)
-Email: mailtopricelesswilliams@gmail.com
+Email: pricelesswilliams1234@gmail.com
 GitHub: https://github.com/ChibuezeWilly
 Experience:
 - Spinbrite (Full-Stack Engineer, Aug 2025 – Sep 2026): Command center, customer portal, AI customer support workflows.

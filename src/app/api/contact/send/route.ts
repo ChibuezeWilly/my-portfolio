@@ -32,12 +32,12 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const recipient = 'mailtopricelesswilliams@gmail.com';
+    const recipient = 'pricelesswilliams1234@gmail.com';
     const gmailAppPassword = process.env.GMAIL_APP_PASSWORD?.replace(/\s/g, '');
 
     if (!gmailAppPassword) {
       return NextResponse.json(
-        { error: 'Gmail sending is not configured yet. Please email directly at mailtopricelesswilliams@gmail.com.' },
+        { error: 'Gmail sending is not configured yet. Please email directly at pricelesswilliams1234@gmail.com.' },
         { status: 503 },
       );
     }
@@ -68,7 +68,7 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error('Gmail SMTP contact send failed:', error);
     return NextResponse.json(
-      { error: 'Your message could not be sent. Please try again later or email directly at mailtopricelesswilliams@gmail.com.' },
+      { error: 'Your message could not be sent. Please try again later or email directly at pricelesswilliams1234@gmail.com.' },
       { status: 502 }
     );
   }
