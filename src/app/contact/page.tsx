@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { ContactContent } from '@/components/contact/contact-content';
 
 export const metadata: Metadata = {
-  title: "Let's Build Something Amazing | Contact Chibueze Williams",
+  title: "Let's Build Something Amazing | Contact Chibueze Williams Obodo",
   description:
-    'Get in touch with Chibueze Williams for full-stack software development, architectural consulting, and high-impact digital products.',
+    'Get in touch with Chibueze Williams Obodo for full-stack software development, architectural consulting, and high-impact digital products.',
 };
 
 export default function ContactPage() {

@@ -147,7 +147,7 @@ export function AiPanel({ project, onClose, initialMode = 'chat' }: AiPanelProps
           const copy = [...prev];
           copy[assistantIndex] = {
             role: 'assistant',
-            content: `I encountered an issue connecting to the AI inference service: ${errMsg}. You can try again or reach out to Chibueze directly!`,
+            content: `I encountered an issue connecting to the AI inference service: ${errMsg}. You can try again or reach out to Chibueze Williams Obodo directly!`,
           };
           return copy;
         });
@@ -272,7 +272,7 @@ export function AiPanel({ project, onClose, initialMode = 'chat' }: AiPanelProps
                       className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#FF6A00] text-white text-xs font-semibold hover:bg-[#FF8533] transition-colors"
                     >
                       <Mail className="w-3.5 h-3.5" />
-                      <span>Message Chibueze</span>
+                      <span>Message Chibueze Williams Obodo</span>
                     </a>
                   </div>
                 )}

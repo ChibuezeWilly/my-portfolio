@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { ProjectsShowcase } from '@/components/projects/projects-showcase';
 
 export const metadata: Metadata = {
-  title: 'Selected Work & Projects | Chibueze Williams',
+  title: 'Selected Work & Projects | Chibueze Williams Obodo',
   description:
-    'Explore projects built by Chibueze Williams including Operon, Novora, TallyFlow, and ChurnDesk, featuring an interactive project-aware AI assistant.',
+    'Explore projects built by Chibueze Williams Obodo including Operon, Novora, TallyFlow, and ChurnDesk, featuring an interactive project-aware AI assistant.',
 };
 
 export default function ProjectsPage() {

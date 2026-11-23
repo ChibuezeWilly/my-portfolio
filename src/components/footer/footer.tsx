@@ -162,7 +162,7 @@ export function Footer() {
         {/* Bottom Center Credit matching Line 43 */}
         <div className="pt-8 flex justify-center text-center">
           <p className="text-xs text-zinc-500 font-mono tracking-wider">
-            Designed &amp; Built by Chibueze Williams
+            Designed &amp; Built by Chibueze Williams Obodo
           </p>
         </div>
       </div>

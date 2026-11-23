@@ -9,11 +9,11 @@ export function buildSystemPrompt(
   project: ProjectKnowledge | null,
   globalData: { global: Record<string, unknown>; experience: Record<string, unknown>; skills: Record<string, unknown> }
 ): string {
-  const projectName = project ? project.name : 'Chibueze Williams Portfolio';
+  const projectName = project ? project.name : 'Chibueze Williams Obodo Portfolio';
   const isVerified = project ? project.verified : false;
 
-  return `You are the AI Project Assistant for Chibueze Williams' developer portfolio.
-Your purpose is to help visitors understand Chibueze's work, technical decisions, architecture, technologies, features, challenges, and background.
+  return `You are the AI Project Assistant for Chibueze Williams Obodo's developer portfolio.
+Your purpose is to help visitors understand Chibueze Williams Obodo's work, technical decisions, architecture, technologies, features, challenges, and background.
 
 CURRENT EXPLORATION CONTEXT:
 Project: ${projectName}
@@ -24,7 +24,7 @@ PROJECT KNOWLEDGE:
 ${JSON.stringify(project || {}, null, 2)}
 
 GLOBAL PORTFOLIO KNOWLEDGE:
-Owner: Chibueze Williams (Full-Stack Software Engineer)
+Owner: Chibueze Williams Obodo (Full-Stack Software Engineer)
 Email: pricelesswilliams1234@gmail.com
 GitHub: https://github.com/ChibuezeWilly
 Experience:
@@ -32,10 +32,10 @@ Experience:
 - Lumecs (Founding Frontend Engineer, Jan 2024 – Jun 2025): Web3 quest platform, scaled to 1,500+ DAU.
 
 STRICT ACCURACY RULES:
-1. You are an AI assistant representing Chibueze's portfolio. Never claim to be Chibueze himself.
+1. You are an AI assistant representing Chibueze Williams Obodo's portfolio. Never claim to be Chibueze Williams Obodo himself.
 2. Answer based ONLY on the provided project context. Do NOT fabricate features, unverified architecture, awards, metrics, or technologies not documented above.
 3. If the user asks about an architectural detail, feature, or metric that is unverified or marked null, DO NOT speculate. Explicitly reply:
-"I don't have a verified answer to that. You can reach Chibueze directly and ask him about it."
+"I don't have a verified answer to that. You can reach Chibueze Williams Obodo directly and ask him about it."
 4. If the user asks about another project, briefly explain what that project is and invite them to switch to that project in the left panel to explore it in depth.
 5. Keep explanations technically clear, modular, and professional. Format code, architecture layers, and key points with clean Markdown.`;
 }
@@ -51,7 +51,7 @@ export function generateLocalKnowledgeResponse(
   const p = prompt.toLowerCase();
 
   if (!project) {
-    return `Welcome! I am Chibueze Williams' portfolio assistant. You can select any project from the showcase to explore its architecture, problem statement, technical stack, and design challenges. What would you like to know?`;
+    return `Welcome! I am Chibueze Williams Obodo's portfolio assistant. You can select any project from the showcase to explore its architecture, problem statement, technical stack, and design challenges. What would you like to know?`;
   }
 
   // Question: What problem does this solve?
@@ -64,7 +64,7 @@ ${project.problem}
 **Solution Approach:**
 ${project.solution || 'Streamlined architectural design focused on reliability and performance.'}`;
     }
-    return `I don't have a verified answer to that. You can reach Chibueze directly and ask him about it.`;
+    return `I don't have a verified answer to that. You can reach Chibueze Williams Obodo directly and ask him about it.`;
   }
 
   // Question: Architecture
@@ -80,7 +80,7 @@ ${project.architecture}
 
 ${decisions ? `\n**Key Technical Decisions:**\n${decisions}` : ''}`;
     }
-    return `I don't have a verified answer to that. You can reach Chibueze directly and ask him about it.`;
+    return `I don't have a verified answer to that. You can reach Chibueze Williams Obodo directly and ask him about it.`;
   }
 
   // Question: Technologies
@@ -93,7 +93,7 @@ ${project.technologies.map((t) => `- **${t}**`).join('\n')}
 
 Each technology was chosen to optimize developer ergonomics, compile-time safety, and high-performance delivery.`;
     }
-    return `I don't have a verified answer to that. You can reach Chibueze directly and ask him about it.`;
+    return `I don't have a verified answer to that. You can reach Chibueze Williams Obodo directly and ask him about it.`;
   }
 
   // Question: Challenges
@@ -105,7 +105,7 @@ ${project.challenges
   .map((c) => `**Challenge:** ${c.challenge}\n**Resolution:** ${c.solution}`)
   .join('\n\n')}`;
     }
-    return `I don't have a verified answer to that. You can reach Chibueze directly and ask him about it.`;
+    return `I don't have a verified answer to that. You can reach Chibueze Williams Obodo directly and ask him about it.`;
   }
 
   // Question: Features
@@ -115,17 +115,17 @@ ${project.challenges
 
 ${project.features.map((f) => `- ${f}`).join('\n')}`;
     }
-    return `I don't have a verified answer to that. You can reach Chibueze directly and ask him about it.`;
+    return `I don't have a verified answer to that. You can reach Chibueze Williams Obodo directly and ask him about it.`;
   }
 
   // Question: Role
   if (p.includes('role') || p.includes('what did you do') || p.includes('contribution')) {
     if (project.contributions && project.contributions.length > 0) {
-      return `### Chibueze's Role on ${project.name}
+      return `### Chibueze Williams Obodo's Role on ${project.name}
 
 ${project.contributions.join('\n\n')}`;
     }
-    return `I don't have a verified answer to that. You can reach Chibueze directly and ask him about it.`;
+    return `I don't have a verified answer to that. You can reach Chibueze Williams Obodo directly and ask him about it.`;
   }
 
   // Default overview if asking general overview
@@ -140,7 +140,7 @@ Feel free to ask about its architecture, specific engineering challenges, or des
   }
 
   // Unknown information fallback
-  return `I don't have a verified answer to that. You can reach Chibueze directly and ask him about it.`;
+  return `I don't have a verified answer to that. You can reach Chibueze Williams Obodo directly and ask him about it.`;
 }
 
 /**

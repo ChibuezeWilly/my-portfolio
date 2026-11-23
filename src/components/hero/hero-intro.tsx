@@ -29,7 +29,7 @@ export function HeroIntro() {
       >
         <span className="w-2 h-2 rounded-full bg-[#FF6A00] animate-pulse" />
         <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-[#FF6A00] font-semibold">
-          HELLO, I&apos;M CHIBUEZE WILLIAMS
+          HELLO, I&apos;M CHIBUEZE WILLIAMS OBODO
         </span>
       </motion.div>
 

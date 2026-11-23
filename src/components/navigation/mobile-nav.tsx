@@ -33,7 +33,7 @@ export function MobileNav() {
             <span className="text-[#FF6A00]">W</span>
           </div>
           <span className="truncate font-bold text-sm tracking-tight text-white">
-            Chibueze Williams
+            Chibueze Williams Obodo
           </span>
         </Link>
 

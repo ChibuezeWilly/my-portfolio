@@ -22,7 +22,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${project.name} | Project Showcase | Chibueze Williams`,
+    title: `${project.name} | Project Showcase | Chibueze Williams Obodo`,
     description: project.shortDescription,
   };
 }

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { SkillsContent } from '@/components/skills/skills-content';
 
 export const metadata: Metadata = {
-  title: 'Tech Toolbox & Skills | Chibueze Williams',
+  title: 'Tech Toolbox & Skills | Chibueze Williams Obodo',
   description:
     'Technologies and engineering strengths across frontend and backend development, AI systems, data engineering, integrations, deployment, security, and reliability.',
 };

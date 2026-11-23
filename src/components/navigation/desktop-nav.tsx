@@ -13,7 +13,7 @@ export function DesktopNav() {
   return (
     <header className="sticky top-0 z-40 hidden md:block w-full glass-nav transition-colors duration-200">
       <div className="max-w-7xl mx-auto sm:px-4 md:px-5 lg:px-6 h-20 flex items-center justify-between">
-        {/* Brand: CW Emblem ('C' white, 'W' orange) right before Chibueze Williams */}
+        {/* Brand: CW Emblem ('C' white, 'W' orange) right before Chibueze Williams Obodo */}
         <Link href="/" className="flex items-center sm:gap-2 md:gap-3 group">
           <div className="flex items-center font-black text-2xl tracking-tighter leading-none select-none">
             <span className="text-white">C</span>

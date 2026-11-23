@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
     });
 
     await transporter.sendMail({
-      from: { name: 'Chibueze Williams Portfolio', address: recipient },
+      from: { name: 'Chibueze Williams Obodo Portfolio', address: recipient },
       to: recipient,
       replyTo: email,
       subject: subject?.trim() || `New Portfolio Message from ${name}`,

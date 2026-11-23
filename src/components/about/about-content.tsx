@@ -128,7 +128,7 @@ export function AboutContent() {
                   <div className="absolute inset-0 bg-gradient-to-b from-[#FF6A00]/40 to-transparent z-[1]" />
                   <Image
                     src="/images/profile.jpg"
-                    alt="Chibueze Williams"
+                    alt="Chibueze Williams Obodo"
                     fill
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-500 relative z-[2]"
                     priority
@@ -145,7 +145,7 @@ export function AboutContent() {
                 </div>
 
                 <h2 className="text-2xl font-bold uppercase tracking-wider text-white mb-2">
-                  Chibueze Williams
+                  Chibueze Williams Obodo
                 </h2>
 
                 <p className="text-xs sm:text-sm text-zinc-400 max-w-xs leading-relaxed mb-5">
@@ -223,7 +223,7 @@ export function AboutContent() {
               />
 
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 relative z-10">
-                Hi, I&apos;m Williams.
+                Hi, I&apos;m Chibueze Williams Obodo.
               </h3>
               <div className="space-y-4 text-sm text-zinc-300 leading-relaxed relative z-10">
                 <p>

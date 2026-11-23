@@ -22,11 +22,11 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Chibueze Williams | Full-Stack Software Engineer',
+  title: 'Chibueze Williams Obodo | Full-Stack Software Engineer',
   description:
-    "Portfolio of Chibueze Williams, a Full-Stack Software Engineer specializing in high-performance web applications, scalable backends, and interactive digital products.",
+    "Portfolio of Chibueze Williams Obodo, a Full-Stack Software Engineer specializing in high-performance web applications, scalable backends, and interactive digital products.",
   keywords: [
-    'Chibueze Williams',
+    'Chibueze Williams Obodo',
     'Full-Stack Developer',
     'Software Engineer',
     'React',
@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     'Python',
     'Web Development',
   ],
-  authors: [{ name: 'Chibueze Williams' }],
-  creator: 'Chibueze Williams',
+  authors: [{ name: 'Chibueze Williams Obodo' }],
+  creator: 'Chibueze Williams Obodo',
   openGraph: {
-    title: 'Chibueze Williams | Full-Stack Software Engineer',
+    title: 'Chibueze Williams Obodo | Full-Stack Software Engineer',
     description:
       'I Understand, Code & Solve Problems. Discover projects, technical architecture, and interactive AI assistant.',
     url: 'https://chibuezewilliams.dev',
-    siteName: 'Chibueze Williams Portfolio',
+    siteName: 'Chibueze Williams Obodo Portfolio',
     locale: 'en_US',
     type: 'website',
   },

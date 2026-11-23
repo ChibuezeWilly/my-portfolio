@@ -50,7 +50,7 @@ export function LoadingScreen({ onComplete }: { onComplete?: () => void }) {
     }
   }, [show]);
 
-  const nameLetters = 'CHIBUEZE WILLIAMS'.split('');
+  const nameLetters = 'CHIBUEZE WILLIAMS OBODO'.split('');
 
   return (
     <AnimatePresence>

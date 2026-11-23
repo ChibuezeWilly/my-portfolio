@@ -48,7 +48,7 @@ export function HeroPortrait() {
 
           <Image
             src="/images/profile.jpg"
-            alt="Chibueze Williams | Full-Stack Engineer"
+            alt="Chibueze Williams Obodo | Full-Stack Engineer"
             fill
             className="object-cover object-top group-hover:scale-[1.03] transition-transform duration-500 relative z-10"
             priority
@@ -58,7 +58,7 @@ export function HeroPortrait() {
         {/* Lower Name Label */}
         <div className="mt-2 text-center flex flex-col items-center">
           <span className="font-serif italic text-xs text-[#FF6A00] -mb-0.5 select-none">
-            Williams
+            Williams Obodo
           </span>
           <span className="font-bold text-xs tracking-widest uppercase text-white">
             Chibueze
