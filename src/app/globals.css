@@ -1,26 +1,130 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+/* ========================================================
+   CHIBUEZE WILLIAMS — PREMIUM DEVELOPER PORTFOLIO
+   Pure Black Theme with Vibrant Orange Accents (#FF6A00)
+   ======================================================== */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #080808;
+  --bg-secondary: #0D0D12;
+  --surface-card: rgba(17, 17, 22, 0.75);
+  --surface-card-hover: rgba(28, 28, 35, 0.9);
+  --accent-primary: #FF6A00;
+  --accent-hover: #FF8533;
+  --accent-glow: rgba(255, 106, 0, 0.28);
+  --text-main: #F5F5F5;
+  --text-muted: #A1A1AA;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(255, 106, 0, 0.45);
+  --dot-color: #FF6A00;
+  --nav-bg: rgba(8, 8, 10, 0.88);
+
+  --background: #080808;
+  --foreground: #F5F5F5;
+  --card: rgba(17, 17, 22, 0.75);
+  --card-foreground: #F5F5F5;
+  --primary: #FF6A00;
+  --primary-foreground: #FFFFFF;
+  --secondary: #18181B;
+  --secondary-foreground: #F5F5F5;
+  --muted: #18181B;
+  --muted-foreground: #A1A1AA;
+  --accent: #FF6A00;
+  --accent-foreground: #FFFFFF;
+  --border: rgba(255, 255, 255, 0.08);
+  --radius: 0.85rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Base Body Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  overflow-x: clip;
+  scrollbar-gutter: stable;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #080808;
+  color: #F5F5F5;
+  font-family: var(--font-plus-jakarta), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+/* Glassmorphism and Card Panels */
+.glass-panel {
+  background: var(--surface-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+}
+
+.glass-nav {
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.glass-bottom-nav {
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  background: var(--surface-card-hover);
+  border-color: var(--border-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -8px var(--accent-glow);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6A00;
+}
+
+/* Ambient glow orb */
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(95px);
+  pointer-events: none;
+  opacity: 0.18;
+  z-index: 0;
+}
+
+/* Text Highlights */
+.text-accent-gradient {
+  background: linear-gradient(135deg, #FF6A00 0%, #FFA04D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

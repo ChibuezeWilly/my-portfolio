@@ -1,1 +1,38 @@
-{"name":"Novora","slug":"novora","verified":false,"overview":null,"problem":null,"solution":null,"architecture":null,"technologies":[],"features":[],"designDecisions":[],"challenges":[],"solutions":[],"contributions":[],"results":[],"links":{"github":null,"liveUrl":null}}
+{
+  "name": "Novora",
+  "slug": "novora",
+  "classification": "independent_project",
+  "verified": false,
+  "overview": "AI voice agent evaluation platform for conversational workflow testing, performance measurement, and failure discovery.",
+  "problem": "Teams need to find voice agent workflow and performance failures before they affect real users.",
+  "solution": "Novora evaluates AI voice agents by testing conversational workflows, measuring agent performance, and identifying failures before launch.",
+  "architecture": "A FastAPI backend orchestrates conversational evaluations, with a React and TypeScript interface for inspecting agent performance and failures.",
+  "technologies": ["Python", "FastAPI", "PostgreSQL", "React", "TypeScript", "Tailwind CSS", "WebSockets"],
+  "features": ["Conversational workflow testing", "Voice agent performance measurement", "Failure identification before real users are affected"],
+  "design_decisions": [
+    {
+      "decision": "FastAPI for commerce APIs",
+      "reason": "Provides a Python API layer with typed validation for catalog, inventory, and checkout requests."
+    },
+    {
+      "decision": "Stripe Payment Element",
+      "reason": "Ensures PCI-compliant checkout with native support for digital wallets and international payments."
+    }
+  ],
+  "challenges": [
+    {
+      "challenge": "Maintaining real-time inventory synchronization under high concurrent traffic",
+      "solution": "Implemented optimistic UI updates combined with atomic inventory reservations on the server."
+    }
+  ],
+  "contributions": [
+    "Full-Stack Developer — built the responsive UI, product catalog filters, and secure payment processing flow."
+  ],
+  "results": [],
+  "links": {
+    "github": "https://github.com/novora-voice",
+    "backend_repository": "https://github.com/novora-voice/novora-backend",
+    "live_preview": "https://novora-voice.github.io/novora-frontend/"
+  },
+  "additional_context": "Novora is an AI voice agent evaluation platform for testing conversational workflows, measuring agent performance, and identifying failures before they affect real users."
+}

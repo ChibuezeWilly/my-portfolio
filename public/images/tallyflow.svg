@@ -1,0 +1,36 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="tfGlow" cx="50%" cy="10%" r="80%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#064E3B" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#022C22" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="tfGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B"/>
+      <stop offset="100%" stop-color="#021C16"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#tfGlow)"/>
+  <rect x="60" y="60" width="1080" height="630" rx="20" fill="url(#tfGrad)" stroke="rgba(16,185,129,0.3)" stroke-width="1.5"/>
+  <circle cx="100" cy="100" r="8" fill="#EF4444"/>
+  <circle cx="125" cy="100" r="8" fill="#F59E0B"/>
+  <circle cx="150" cy="100" r="8" fill="#10B981"/>
+  
+  <text x="120" y="240" fill="#34D399" font-family="monospace" font-size="20" font-weight="bold">TALLYFLOW // FINTECH &amp; ACCOUNTING</text>
+  <text x="120" y="300" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="44" font-weight="700">Automated Financial Ledger &amp; Cashflow</text>
+  <text x="120" y="350" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="20">Real-time reconciliations, tax compliance estimation, and multi-currency billing</text>
+
+  <g transform="translate(120, 410)">
+    <rect width="450" height="200" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="30" y="44" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="14">MONTHLY RUN RATE</text>
+    <text x="30" y="90" fill="#10B981" font-family="monospace" font-size="34" font-weight="bold">$412,850</text>
+    <path d="M 30 150 L 110 135 L 200 145 L 290 100 L 370 120 L 410 70" stroke="#10B981" stroke-width="3" fill="none"/>
+  </g>
+  <g transform="translate(600, 410)">
+    <rect width="450" height="200" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="30" y="44" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="14">RECONCILIATION SPEED</text>
+    <text x="30" y="90" fill="#34D399" font-family="monospace" font-size="34" font-weight="bold">&lt; 0.4s</text>
+    <rect x="30" y="130" width="390" height="12" rx="6" fill="rgba(255,255,255,0.1)"/>
+    <rect x="30" y="130" width="380" height="12" rx="6" fill="#34D399"/>
+  </g>
+</svg>

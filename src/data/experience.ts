@@ -1,0 +1,18 @@
+import { Experience } from '@/types';
+
+export const experiences: Experience[] = [
+  {
+    company: 'Spinbrite',
+    position: 'Full-Stack Engineer',
+    startDate: 'August 2025',
+    endDate: 'September 2026',
+    description: 'Built an operations command center, customer-facing portal, and AI-powered customer support workflows.',
+  },
+  {
+    company: 'Lumecs',
+    position: 'Founding Frontend Engineer',
+    startDate: 'January 2024',
+    endDate: 'June 2025',
+    description: 'Led frontend development for a Web3 quest platform, expanded into backend and infrastructure engineering, and contributed to growing the platform to 1,500+ daily active users.',
+  },
+];

@@ -10,6 +10,7 @@ export interface Project {
   gallery?: string[];
   technologies: string[];
   githubUrl?: string | null;
+  backendUrl?: string | null;
   liveUrl?: string | null;
   problem: string;
   solution: string;

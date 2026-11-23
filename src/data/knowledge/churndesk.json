@@ -1,1 +1,42 @@
-{"name":"ChurnDesk","slug":"churndesk","verified":false,"overview":null,"problem":null,"solution":null,"architecture":null,"technologies":[],"features":[],"designDecisions":[],"challenges":[],"solutions":[],"contributions":[],"results":[],"links":{"github":null,"liveUrl":null}}
+{
+  "name": "ChurnDesk",
+  "slug": "churndesk",
+  "classification": "independent_project",
+  "verified": false,
+  "overview": "AI-powered customer support and incident response platform for ticket investigation, resolution coordination, and escalation.",
+  "problem": "Subscription businesses frequently discover customer dissatisfaction only after cancellation has already occurred.",
+  "solution": "ChurnDesk helps teams investigate support tickets, retrieve relevant information, coordinate resolutions, and escalate issues that need human attention.",
+  "architecture": "A React and TypeScript dashboard consumes Python FastAPI endpoints for account health, engagement events, and retention analytics. PostgreSQL stores customer and activity records.",
+  "technologies": ["Python", "FastAPI", "PostgreSQL", "React", "TypeScript", "Tailwind CSS"],
+  "features": [
+    "Automated account health scoring algorithm",
+    "At-risk customer notification hooks and alerts",
+    "Historical cohort retention analysis matrices",
+    "One-click proactive re-engagement workflow triggers"
+  ],
+  "design_decisions": [
+    {
+      "decision": "FastAPI for analytics endpoints",
+      "reason": "Keeps the backend in Python and validates event and account data at the API boundary."
+    },
+    {
+      "decision": "Tailwind CSS with glassmorphic dashboards",
+      "reason": "Delivers a modern, dense data-display layout with high contrast and readable metrics."
+    }
+  ],
+  "challenges": [
+    {
+      "challenge": "Computing health scores efficiently across thousands of activity events",
+      "solution": "Scheduled batch aggregation jobs that compute rolling 7-day and 30-day window metrics into summary tables."
+    }
+  ],
+  "contributions": [
+    "Full-Stack Developer — implemented the event ingestion endpoint, FastAPI API layer, and retention dashboard."
+  ],
+  "results": [],
+  "links": {
+    "github": "https://github.com/ChibuezeWilly/AI-Powered-Incident-Response-Customer-Support-Platform",
+    "live_preview": "https://ai-incident-response-customer-suppo.vercel.app/"
+  },
+  "additional_context": "ChurnDesk is an AI-powered customer support and incident response platform that investigates tickets, retrieves relevant information, coordinates resolutions, and escalates issues requiring human attention."
+}

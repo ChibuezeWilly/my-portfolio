@@ -1,0 +1,74 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="frameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181B" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0A0A0C" stop-opacity="0.95"/>
+    </linearGradient>
+    <radialGradient id="portraitGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FF6A00" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="orangeCard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF7518"/>
+      <stop offset="100%" stop-color="#FF5A00"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Glow Behind Frame -->
+  <rect x="50" y="50" width="700" height="900" rx="40" fill="url(#portraitGlow)"/>
+
+  <!-- Outer Layered Dark Frame matching Image 4 -->
+  <rect x="80" y="60" width="640" height="880" rx="36" fill="url(#frameGrad)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="2"/>
+  <rect x="92" y="72" width="616" height="856" rx="28" fill="#0D0D10" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+
+  <!-- Inner Vibrant Orange Portrait Box (Exact Match to Image 4) -->
+  <rect x="130" y="110" width="540" height="600" rx="24" fill="url(#orangeCard)"/>
+
+  <!-- Developer Silhouette inside Orange Box (Side Profile, Curly Hair, Glasses, Shirt) -->
+  <g transform="translate(130, 110)">
+    <clipPath id="innerClip">
+      <rect width="540" height="600" rx="24"/>
+    </clipPath>
+    <g clip-path="url(#innerClip)">
+      <!-- Shoulders & Torso -->
+      <path d="M 120 600 C 140 430, 240 410, 290 410 C 340 410, 430 430, 480 600 Z" fill="#0A0A0E"/>
+      
+      <!-- Neck -->
+      <path d="M 235 340 L 235 430 L 325 430 L 325 350 Z" fill="#0A0A0E"/>
+      
+      <!-- Head Side Profile -->
+      <!-- Jaw & Chin -->
+      <path d="M 230 350 C 210 320, 200 290, 200 270 C 190 260, 180 250, 195 240 C 200 230, 195 210, 210 200 C 220 180, 240 160, 270 150 C 320 140, 380 160, 395 210 C 405 240, 400 280, 385 310 C 370 340, 340 360, 310 365 L 230 350 Z" fill="#0A0A0E"/>
+
+      <!-- Stylish Curls / Textured Hair Silhouette -->
+      <circle cx="270" cy="150" r="30" fill="#0A0A0E"/>
+      <circle cx="310" cy="140" r="34" fill="#0A0A0E"/>
+      <circle cx="350" cy="150" r="32" fill="#0A0A0E"/>
+      <circle cx="385" cy="175" r="28" fill="#0A0A0E"/>
+      <circle cx="395" cy="210" r="26" fill="#0A0A0E"/>
+      <circle cx="240" cy="170" r="28" fill="#0A0A0E"/>
+      <circle cx="220" cy="195" r="25" fill="#0A0A0E"/>
+
+      <!-- Minimalist Glasses Rim Highlight -->
+      <rect x="200" y="225" width="45" height="18" rx="6" fill="#1C1C22" stroke="#FF944D" stroke-width="1.5"/>
+
+      <!-- Soft Ear Detail -->
+      <ellipse cx="300" cy="265" rx="14" ry="22" fill="#141418"/>
+    </g>
+  </g>
+
+  <!-- Below the Orange Box inside the Frame (Matching Image 4) -->
+  <!-- Signature in Cursive Style -->
+  <text x="400" y="775" text-anchor="middle" fill="#FF8533" font-family="'Brush Script MT', 'Dancing Script', 'Caveat', cursive, sans-serif" font-size="46" font-style="italic" letter-spacing="2">
+    Williams
+  </text>
+
+  <!-- Clean Bold Name -->
+  <text x="400" y="830" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="700" letter-spacing="1">
+    Chibueze
+  </text>
+  
+  <text x="400" y="865" text-anchor="middle" fill="#A1A1AA" font-family="monospace" font-size="14" letter-spacing="3">
+    FULL STACK DEVELOPER
+  </text>
+</svg>

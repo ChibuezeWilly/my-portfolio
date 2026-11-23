@@ -1,1 +1,42 @@
-{"name":"TallyFlow","slug":"tallyflow","verified":false,"overview":null,"problem":null,"solution":null,"architecture":null,"technologies":[],"features":[],"designDecisions":[],"challenges":[],"solutions":[],"contributions":[],"results":[],"links":{"github":null,"liveUrl":null}}
+{
+  "name": "TallyFlow",
+  "slug": "tallyflow",
+  "classification": "independent_project",
+  "verified": false,
+  "overview": "AI-powered financial reconciliation platform for investigating invoices, payments, and ledger discrepancies.",
+  "problem": "Small businesses and creators spend dozens of hours each month manually matching bank statements against invoices and receivables.",
+  "solution": "TallyFlow combines intelligent investigation, deterministic matching, and human approval to resolve financial discrepancies.",
+  "architecture": "FastAPI Python backend handling high-precision financial arithmetic and database migrations with PostgreSQL, accompanied by a React & TypeScript frontend.",
+  "technologies": ["Python", "FastAPI", "PostgreSQL", "React", "TypeScript"],
+  "features": [
+    "Automated bank feed ingestion and invoice matching",
+    "Dynamic cashflow forecasting chart projections",
+    "Exportable financial reports in PDF and spreadsheet formats",
+    "Role-based access control for accountants and auditors"
+  ],
+  "design_decisions": [
+    {
+      "decision": "FastAPI for backend calculations",
+      "reason": "Provides asynchronous high-throughput execution with strict Pydantic data validation for sensitive monetary amounts."
+    },
+    {
+      "decision": "PostgreSQL with Decimal precision",
+      "reason": "Avoids floating point rounding errors critical in financial accounting systems."
+    }
+  ],
+  "challenges": [
+    {
+      "challenge": "Handling mismatched date formats and currency strings from diverse banking exports",
+      "solution": "Created an extensible parser pipeline that normalizes various CSV and JSON bank schemas into a unified transaction structure."
+    }
+  ],
+  "contributions": [
+    "Lead Engineer — developed the reconciliation parser in FastAPI and the interactive data visualization dashboard."
+  ],
+  "results": [],
+  "links": {
+    "github": "https://github.com/ChibuezeWilly/AI-Powered-Financial-Close-Reconciliation-platform",
+    "live_preview": "https://ai-powered-financial-close-system.vercel.app/"
+  },
+  "additional_context": "TallyFlow is an AI-powered financial reconciliation platform that investigates invoice, payment, and ledger discrepancies using intelligent investigation, deterministic matching, and human approval."
+}
