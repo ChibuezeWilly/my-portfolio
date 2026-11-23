@@ -144,15 +144,14 @@ Feel free to ask about its architecture, specific engineering challenges, or des
 }
 
 /**
- * Call Hugging Face Inference API (Meta Llama 3.1 8B Instruct)
+ * Call a selected model through the Hugging Face Inference API.
  */
 async function callHuggingFace(
   systemPrompt: string,
   messages: ChatMessage[],
-  apiKey: string
+  apiKey: string,
+  model: string,
 ): Promise<Response> {
-  const model = process.env.HUGGINGFACE_MODEL || 'deepseek-ai/DeepSeek-V3.2';
-
   const formattedMessages = [
     { role: 'system', content: systemPrompt },
     ...messages.slice(-8), // Limit recent history for token economy
@@ -214,16 +213,25 @@ export async function getStreamingChatResponse(
   const geminiKey = process.env.GEMINI_API_KEY;
   const lastUserMessage = messages[messages.length - 1]?.content || '';
 
-  // 1. Try Primary: Hugging Face
+  // 1. Try the primary Hugging Face model, then the configured fallback.
   if (hfKey) {
-    try {
-      const response = await callHuggingFace(systemPrompt, messages, hfKey);
-      if (response.ok && response.body) {
-        return response.body;
+    const models = [
+      process.env.HUGGINGFACE_PRIMARY_MODEL || 'meta-llama/Llama-3.1-8B-Instruct',
+      process.env.HUGGINGFACE_FALLBACK_MODEL || 'deepseek-ai/DeepSeek-V3.2',
+    ];
+
+    for (const [index, model] of models.entries()) {
+      if (index > 0 && model === models[0]) continue;
+
+      try {
+        const response = await callHuggingFace(systemPrompt, messages, hfKey, model);
+        if (response.ok && response.body) {
+          return response.body;
+        }
+        console.warn(`Hugging Face model ${model} returned ${response.status}; trying the next provider.`);
+      } catch (err) {
+        console.warn(`Hugging Face model ${model} request failed:`, err);
       }
-      console.warn('Hugging Face response not OK, falling back to Gemini.');
-    } catch (err) {
-      console.warn('Hugging Face request failed:', err);
     }
   }
 
