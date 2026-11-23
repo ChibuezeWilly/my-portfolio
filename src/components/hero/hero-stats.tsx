@@ -7,7 +7,7 @@ import { Smile, Briefcase, Users, Code, Coffee, Rocket } from 'lucide-react';
 const statsData = [
   { value: '2+', label: 'Years of Experience', icon: Smile },
   { value: '6+', label: 'Projects Built', icon: Briefcase },
-  { value: '2,000+', label: 'Customers Supported', icon: Users },
+  { value: '10,000+', label: 'Customers Supported', icon: Users },
   { value: '15+', label: 'Technologies', icon: Code },
   { value: '6,000+', label: 'Hours of Coding', icon: Coffee },
   { value: '2', label: 'Products Launched', icon: Rocket },
