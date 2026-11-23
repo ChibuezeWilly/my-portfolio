@@ -151,7 +151,7 @@ async function callHuggingFace(
   messages: ChatMessage[],
   apiKey: string
 ): Promise<Response> {
-  const model = process.env.HUGGINGFACE_MODEL || 'meta-llama/Meta-Llama-3.1-8B-Instruct';
+  const model = process.env.HUGGINGFACE_MODEL || 'deepseek-ai/DeepSeek-V3.2';
 
   const formattedMessages = [
     { role: 'system', content: systemPrompt },
