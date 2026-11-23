@@ -95,7 +95,7 @@ export function ContactContent() {
               <div className="flex-1 min-w-0">
                 <p className="text-xs font-mono uppercase text-zinc-500">Email Address</p>
                 <p className="text-sm font-semibold text-white truncate group-hover:text-[#FF6A00] transition-colors">
-                  mailtopricelesswilliams@gmail.com
+                  pricelesswilliams@gmail.com
                 </p>
               </div>
               <ArrowUpRight className="w-4 h-4 text-zinc-500 group-hover:text-white transition-colors" />
