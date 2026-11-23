@@ -31,45 +31,45 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const agentMailKey = process.env.AGENTMAIL_API_KEY;
+    const agentMailKey = process.env.AGENTMAIL_API_KEY?.trim();
+    const agentMailInboxId = process.env.AGENTMAIL_INBOX_ID?.trim();
     const recipient = 'pricelesswilliams1234@gmail.com';
 
-    // If AgentMail is configured, attempt sending via AgentMail API
-    if (agentMailKey) {
-      try {
-        const mailResponse = await fetch('https://api.agentmail.to/v1/send', {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${agentMailKey}`,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            to: recipient,
-            from: email,
-            subject: subject || `New Portfolio Message from ${name}`,
-            text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-          }),
-        });
-
-        if (mailResponse.ok) {
-          return NextResponse.json({
-            success: true,
-            message: 'Your message has been sent successfully.',
-          });
-        }
-      } catch (mailError) {
-        console.warn('AgentMail request failed:', mailError);
-      }
+    if (!agentMailKey || !agentMailInboxId) {
+      return NextResponse.json(
+        { error: 'Email sending is not configured yet. Please email directly at pricelesswilliams1234@gmail.com.' },
+        { status: 503 },
+      );
     }
 
-    // If AgentMail is not configured or failed, notify client gracefully with mailto fallback
+    const mailResponse = await fetch(
+      `https://api.agentmail.to/v0/inboxes/${encodeURIComponent(agentMailInboxId)}/messages/send`,
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${agentMailKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: recipient,
+          reply_to: email,
+          subject: subject?.trim() || `New Portfolio Message from ${name}`,
+          text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+        }),
+      },
+    );
+
+    if (!mailResponse.ok) {
+      console.error('AgentMail rejected contact message:', mailResponse.status);
+      return NextResponse.json(
+        { error: 'Your message could not be sent. Please try again later or email me directly.' },
+        { status: 502 },
+      );
+    }
+
     return NextResponse.json({
       success: true,
-      provider: 'fallback',
-      message: 'Message received! You can also reach Chibueze directly at pricelesswilliams1234@gmail.com.',
-      mailto: `mailto:${recipient}?subject=${encodeURIComponent(
-        subject || `Question for Chibueze from ${name}`
-      )}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`,
+      message: 'Your message was sent. Thank you for reaching out.',
     });
   } catch (error) {
     console.error('Contact endpoint error:', error);

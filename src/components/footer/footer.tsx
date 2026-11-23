@@ -1,12 +1,24 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Mail, Phone } from 'lucide-react';
+import { ArrowRight, Check, Copy, Mail, Phone } from 'lucide-react';
 import { Github } from '@/components/icons';
 
 export function Footer() {
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText('pricelesswilliams1234@gmail.com');
+      setEmailCopied(true);
+      window.setTimeout(() => setEmailCopied(false), 1800);
+    } catch {
+      setEmailCopied(false);
+    }
+  };
+
   return (
     <footer className="relative w-full border-t border-white/5 bg-[#080808] pt-20 pb-24 md:pb-16 text-zinc-300 overflow-hidden">
       {/* Background Animation on top of #080808 background (visible underneath text) */}
@@ -57,10 +69,10 @@ export function Footer() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href="mailto:pricelesswilliams1234@gmail.com"
+                href="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-white/20 bg-white/5 text-white font-semibold text-sm hover:border-[#FF6A00] hover:text-[#FF6A00] transition-all"
               >
-                <span>Book a Call</span>
+                <span>Send Message</span>
               </a>
             </div>
 
@@ -98,14 +110,23 @@ export function Footer() {
                 </span>
               </h3>
 
-              <div className="mb-6 flex flex-col lg:items-end">
+              <div className="mb-6 flex items-center gap-2 lg:justify-end">
                 <a
                   href="mailto:pricelesswilliams1234@gmail.com"
-                  className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-white/5 border border-white/10 hover:border-[#FF6A00]/50 text-sm text-zinc-200 hover:text-white transition-all shadow-md group"
+                  className="inline-flex min-w-0 items-center gap-3 px-5 py-3 rounded-2xl bg-white/5 border border-white/10 hover:border-[#FF6A00]/50 text-sm text-zinc-200 hover:text-white transition-all shadow-md group"
                 >
                   <Mail className="w-4 h-4 text-[#FF6A00]" />
-                  <span>pricelesswilliams1234@gmail.com</span>
+                  <span className="truncate">pricelesswilliams1234@gmail.com</span>
                 </a>
+                <button
+                  type="button"
+                  onClick={copyEmail}
+                  aria-label={emailCopied ? 'Email address copied' : 'Copy email address'}
+                  title={emailCopied ? 'Copied' : 'Copy email address'}
+                  className="mt-1 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-zinc-300 transition-colors hover:border-[#FF6A00]/50 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6A00]"
+                >
+                  {emailCopied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                </button>
               </div>
             </div>
 

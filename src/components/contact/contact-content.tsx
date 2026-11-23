@@ -15,7 +15,6 @@ export function ContactContent() {
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [statusMessage, setStatusMessage] = useState('');
-  const [mailtoFallback, setMailtoFallback] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,9 +42,6 @@ export function ContactContent() {
 
       setStatus('success');
       setStatusMessage(data.message || 'Your message has been sent successfully.');
-      if (data.mailto) {
-        setMailtoFallback(data.mailto);
-      }
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (err: unknown) {
       setStatus('error');
@@ -213,14 +209,6 @@ export function ContactContent() {
                   <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
                   <span>{statusMessage}</span>
                 </div>
-                {mailtoFallback && (
-                  <a
-                    href={mailtoFallback}
-                    className="underline text-xs font-semibold hover:text-white flex-shrink-0"
-                  >
-                    Open Mail Client
-                  </a>
-                )}
               </div>
             )}
 
