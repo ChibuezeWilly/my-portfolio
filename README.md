@@ -1,4 +1,4 @@
-# Chibueze Williams — Full-Stack Developer Portfolio
+# Chibueze Williams Full-Stack Developer Portfolio
 
 A modern, highly responsive, multi-page portfolio website for **Chibueze Williams**, Full-Stack Software Engineer, engineered with Next.js 16 (App Router), TypeScript, Tailwind CSS, Framer Motion, and a project-aware AI assistant.
 
@@ -31,7 +31,7 @@ A modern, highly responsive, multi-page portfolio website for **Chibueze William
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone & Install Dependencies
 
@@ -50,16 +50,6 @@ cp .env.example .env.local
 ```
 
 Populate the variables:
-
-```env
-# AI Providers (Optional — defaults to internal deterministic streamer if unset)
-HUGGINGFACE_API_KEY=your_huggingface_key
-HUGGINGFACE_MODEL=meta-llama/Meta-Llama-3.1-8B-Instruct
-GEMINI_API_KEY=your_gemini_api_key
-GEMINI_MODEL=gemini-1.5-flash
-
-# Contact / Email Integration (Optional)
-AGENTMAIL_API_KEY=your_agentmail_key
 
 # Public Site URL
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
@@ -146,24 +136,9 @@ src/
 ---
 
 ## 🔒 Security & Privacy
-
-- All AI provider keys (`HUGGINGFACE_API_KEY`, `GEMINI_API_KEY`) and email keys (`AGENTMAIL_API_KEY`) run exclusively on the server within Next.js Route Handlers.
 - Server-side rate limiting on both `/api/ai/chat` and `/api/contact/send`.
 - Client input is strictly validated and sanitized before forwarding to AI models or email processors.
 - Strict unknown information policy ensures the AI never hallucinates undocumented credentials, employment, or project achievements.
-
----
-
-## 🚢 Deployment (Vercel)
-
-1. Push your code to GitHub.
-2. Import the repository into [Vercel](https://vercel.com).
-3. In Project Settings > Environment Variables, add:
-   - `HUGGINGFACE_API_KEY` (if using Hugging Face)
-   - `GEMINI_API_KEY` (if using Google Gemini)
-   - `AGENTMAIL_API_KEY` (if using AgentMail)
-   - `NEXT_PUBLIC_SITE_URL` (your production domain)
-4. Deploy. Next.js 16 will automatically build and optimize all routes.
 
 ---
 
