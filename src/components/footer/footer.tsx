@@ -11,7 +11,7 @@ export function Footer() {
 
   const copyEmail = async () => {
     try {
-      await navigator.clipboard.writeText('pricelesswilliams1234@gmail.com');
+      await navigator.clipboard.writeText('mailtopricelesswilliams@gmail.com');
       setEmailCopied(true);
       window.setTimeout(() => setEmailCopied(false), 1800);
     } catch {
@@ -112,11 +112,11 @@ export function Footer() {
 
               <div className="mb-6 flex items-center gap-2 lg:justify-end">
                 <a
-                  href="mailto:pricelesswilliams1234@gmail.com"
+                  href="mailto:mailtopricelesswilliams@gmail.com"
                   className="inline-flex min-w-0 items-center gap-3 px-5 py-3 rounded-2xl bg-white/5 border border-white/10 hover:border-[#FF6A00]/50 text-sm text-zinc-200 hover:text-white transition-all shadow-md group"
                 >
                   <Mail className="w-4 h-4 text-[#FF6A00]" />
-                  <span className="truncate">pricelesswilliams1234@gmail.com</span>
+                  <span className="truncate">mailtopricelesswilliams@gmail.com</span>
                 </a>
                 <button
                   type="button"
@@ -142,7 +142,7 @@ export function Footer() {
                 <Github className="w-4 h-4" />
               </a>
               <a
-                href="mailto:pricelesswilliams1234@gmail.com"
+                href="mailto:mailtopricelesswilliams@gmail.com"
                 className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:border-[#FF6A00]/50 transition-colors"
                 aria-label="Email"
               >

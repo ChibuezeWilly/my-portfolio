@@ -36,7 +36,7 @@ export const socialLinks = [
   },
   {
     name: 'Email',
-    url: 'mailto:pricelesswilliams1234@gmail.com',
+    url: 'mailto:mailtopricelesswilliams@gmail.com',
     icon: 'Mail',
   },
 ];

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 import { checkRateLimit } from '@/lib/rate-limit';
 
 export async function POST(req: NextRequest) {
@@ -31,51 +32,44 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const agentMailKey = process.env.AGENTMAIL_API_KEY?.trim();
-    const agentMailInboxId = process.env.AGENTMAIL_INBOX_ID?.trim();
-    const recipient = 'pricelesswilliams1234@gmail.com';
+    const recipient = 'mailtopricelesswilliams@gmail.com';
+    const gmailAppPassword = process.env.GMAIL_APP_PASSWORD?.replace(/\s/g, '');
 
-    if (!agentMailKey || !agentMailInboxId) {
+    if (!gmailAppPassword) {
       return NextResponse.json(
-        { error: 'Email sending is not configured yet. Please email directly at pricelesswilliams1234@gmail.com.' },
+        { error: 'Gmail sending is not configured yet. Please email directly at mailtopricelesswilliams@gmail.com.' },
         { status: 503 },
       );
     }
 
-    const mailResponse = await fetch(
-      `https://api.agentmail.to/v0/inboxes/${encodeURIComponent(agentMailInboxId)}/messages/send`,
-      {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${agentMailKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          to: recipient,
-          reply_to: email,
-          subject: subject?.trim() || `New Portfolio Message from ${name}`,
-          text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-        }),
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false,
+      requireTLS: true,
+      auth: {
+        user: recipient,
+        pass: gmailAppPassword,
       },
-    );
+    });
 
-    if (!mailResponse.ok) {
-      console.error('AgentMail rejected contact message:', mailResponse.status);
-      return NextResponse.json(
-        { error: 'Your message could not be sent. Please try again later or email me directly.' },
-        { status: 502 },
-      );
-    }
+    await transporter.sendMail({
+      from: { name: 'Chibueze Williams Portfolio', address: recipient },
+      to: recipient,
+      replyTo: email,
+      subject: subject?.trim() || `New Portfolio Message from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+    });
 
     return NextResponse.json({
       success: true,
       message: 'Your message was sent. Thank you for reaching out.',
     });
   } catch (error) {
-    console.error('Contact endpoint error:', error);
+    console.error('Gmail SMTP contact send failed:', error);
     return NextResponse.json(
-      { error: 'Failed to process message. Please email directly at pricelesswilliams1234@gmail.com.' },
-      { status: 500 }
+      { error: 'Your message could not be sent. Please try again later or email directly at mailtopricelesswilliams@gmail.com.' },
+      { status: 502 }
     );
   }
 }

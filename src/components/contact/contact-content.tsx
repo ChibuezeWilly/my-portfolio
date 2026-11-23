@@ -86,7 +86,7 @@ export function ContactContent() {
 
           <div className="space-y-4">
             <a
-              href="mailto:pricelesswilliams1234@gmail.com"
+              href="mailto:mailtopricelesswilliams@gmail.com"
               className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.03] border border-white/10 hover:border-[#FF6A00]/40 hover:bg-[#FF6A00]/5 transition-all group"
             >
               <div className="w-10 h-10 rounded-lg bg-[#FF6A00]/15 flex items-center justify-center text-[#FF6A00] group-hover:scale-110 transition-transform">
@@ -95,7 +95,7 @@ export function ContactContent() {
               <div className="flex-1 min-w-0">
                 <p className="text-xs font-mono uppercase text-zinc-500">Email Address</p>
                 <p className="text-sm font-semibold text-white truncate group-hover:text-[#FF6A00] transition-colors">
-                  pricelesswilliams1234@gmail.com
+                  mailtopricelesswilliams@gmail.com
                 </p>
               </div>
               <ArrowUpRight className="w-4 h-4 text-zinc-500 group-hover:text-white transition-colors" />

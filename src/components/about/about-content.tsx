@@ -147,7 +147,7 @@ export function AboutContent() {
                   <Github className="w-4 h-4" />
                 </a>
                 <a
-                  href="mailto:pricelesswilliams1234@gmail.com"
+                  href="mailto:mailtopricelesswilliams@gmail.com"
                   aria-label="Email"
                   className="w-10 h-10 rounded-full border border-white/15 bg-white/5 flex items-center justify-center text-zinc-300 hover:text-[#FF6A00] hover:border-[#FF6A00]/50 transition-all"
                 >

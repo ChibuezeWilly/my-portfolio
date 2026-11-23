@@ -148,7 +148,7 @@ export function BriefAboutSection() {
                     <Github className="w-4 h-4" />
                   </a>
                   <a
-                    href="mailto:pricelesswilliams1234@gmail.com"
+                    href="mailto:mailtopricelesswilliams@gmail.com"
                     className="w-10 h-10 rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-zinc-300 hover:text-[#FF6A00] hover:border-[#FF6A00]/50 transition-colors"
                     aria-label="Email"
                   >
