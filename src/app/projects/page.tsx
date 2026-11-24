@@ -4,7 +4,7 @@ import { ProjectsShowcase } from '@/components/projects/projects-showcase';
 export const metadata: Metadata = {
   title: 'Selected Work & Projects | Chibueze Williams Obodo',
   description:
-    'Explore projects built by Chibueze Williams Obodo including Operon, Novora, TallyFlow, and ChurnDesk, featuring an interactive project-aware AI assistant.',
+    'Explore case studies for Operon, Novora, TallyFlow, and ChurnDesk, with product workflows and links to available source code and demos.',
 };
 
 export default function ProjectsPage() {

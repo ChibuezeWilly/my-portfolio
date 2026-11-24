@@ -2,9 +2,19 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { engineeringStrengths, skillCategories } from '@/data/skills';
 import { TechLogo } from '@/components/tech-logo';
+
+const projectLinks: Record<string, { label: string; href: string }[]> = {
+  'AI Systems & Agent Engineering': [{ label: 'Operon', href: '/projects/operon' }, { label: 'Novora', href: '/projects/novora' }, { label: 'ChurnDesk', href: '/projects/churndesk' }],
+  'Backend & API Engineering': [{ label: 'Operon', href: '/projects/operon' }, { label: 'TallyFlow', href: '/projects/tallyflow' }, { label: 'ChurnDesk', href: '/projects/churndesk' }],
+  'Frontend & Product Engineering': [{ label: 'Operon', href: '/projects/operon' }, { label: 'Novora', href: '/projects/novora' }],
+  'Data, Retrieval & Databases': [{ label: 'Operon', href: '/projects/operon' }, { label: 'TallyFlow', href: '/projects/tallyflow' }],
+  'Infrastructure, Testing & Reliability': [{ label: 'Operon', href: '/projects/operon' }, { label: 'Novora', href: '/projects/novora' }],
+  'Integrations & Application Safety': [{ label: 'TallyFlow', href: '/projects/tallyflow' }, { label: 'ChurnDesk', href: '/projects/churndesk' }],
+};
 
 export function SkillsContent() {
   return (
@@ -52,6 +62,13 @@ export function SkillsContent() {
                 </li>
               ))}
             </ul>
+            <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 border-t border-white/[0.06] pt-4">
+              {(projectLinks[category.name] ?? []).map((project) => (
+                <Link key={project.href} href={project.href} className="text-xs font-medium text-[#FF8B3D] hover:text-white">
+                  {project.label} <span aria-hidden="true">↗</span>
+                </Link>
+              ))}
+            </div>
           </motion.article>
         ))}
       </div>

@@ -6,38 +6,24 @@
   "overview": "AI agent creation and operations platform for building, configuring, testing, and managing agents in one workspace.",
   "problem": "Managing distributed workflows and asynchronous background tasks across multi-cloud environments typically requires complex orchestration infrastructure with significant overhead.",
   "solution": "Operon lets users create and manage AI agents, connect knowledge sources and tools, test agents, and monitor execution from one workspace.",
-  "architecture": "Python services expose orchestration and telemetry APIs through FastAPI, with Redis coordinating distributed locks and message passing. A React and TypeScript dashboard presents workflow state, and Docker packages the services.",
-  "technologies": ["Python", "FastAPI", "Redis", "Docker", "React", "TypeScript"],
-  "features": [
-    "Event-driven distributed task execution",
-    "Real-time state machine telemetry dashboard",
-    "Automatic retries with exponential backoff & dead-letter queueing",
-    "Low-overhead memory footprint and fast boot time"
+  "architecture": null,
+  "technologies": [
+    "Python",
+    "FastAPI",
+    "Redis",
+    "Docker",
+    "React",
+    "TypeScript"
   ],
-  "design_decisions": [
-    {
-      "decision": "Redis for message coordination",
-      "reason": "Offers sub-millisecond latency for distributed locking and pub/sub channels without the overhead of heavy message brokers."
-    },
-    {
-      "decision": "FastAPI for orchestration APIs",
-      "reason": "Keeps the service layer in Python and uses typed request models to validate workflow and telemetry data."
-    }
-  ],
-  "challenges": [
-    {
-      "challenge": "Preventing race conditions during concurrent state transitions",
-      "solution": "Implemented atomic Redis Redlock algorithms to guarantee single-worker state machine transitions."
-    }
-  ],
-  "contributions": [
-    "Architect and Core Engineer — designed the event pipeline, state machine definitions, and telemetry dashboards."
-  ],
+  "features": [],
+  "design_decisions": [],
+  "challenges": [],
+  "contributions": [],
   "results": [],
   "links": {
     "github": "https://github.com/Operon-Operation-Platform",
     "live_preview": "https://operon-operation-platform.github.io/frontend",
     "backend": "https://backend-qg67.onrender.com/"
   },
-  "additional_context": "Operon is an AI agent creation and operations platform for building, configuring, testing, and managing agents, knowledge sources, and tools, with execution monitoring in one workspace."
+  "additional_context": "Operon is an AI agent creation and operations platform for building, configuring, testing, and managing agents, knowledge sources, and tools, with execution monitoring in one workspace. Detailed implementation claims, individual contributions, and measured outcomes have not been independently verified from the available source."
 }

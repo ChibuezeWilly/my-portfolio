@@ -7,8 +7,8 @@ export const stats: Stat[] = [
     icon: 'Clock',
   },
   {
-    value: '15+',
-    label: 'Technologies',
+    value: '10,000+',
+    label: 'Lumecs Daily Active Users',
     icon: 'Code',
   },
   {
@@ -17,8 +17,8 @@ export const stats: Stat[] = [
     icon: 'Coffee',
   },
   {
-    value: '6+',
-    label: 'Projects Completed',
+    value: '100+',
+    label: 'Support Tickets / Day',
     icon: 'Briefcase',
   },
   {
@@ -28,7 +28,7 @@ export const stats: Stat[] = [
   },
   {
     value: '2,000+',
-    label: 'Customers Supported',
+    label: 'Spinbrite Customers',
     icon: 'Users',
   },
 ];

@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
 import { Github } from "@/components/icons";
 import { TechLogo } from "@/components/tech-logo";
-import { HeroIntro } from "@/components/hero/hero-intro";
 
 const techStack = [
   "JavaScript",
@@ -27,19 +26,21 @@ const techStack = [
 
 const experiencesList = [
   {
-    role: "Full Stack Software Engineer",
+    role: "Full-Stack AI Engineer",
     company: "Spinbrite",
-    period: "2025 - Present",
+    period: "August 2025 – September 2026",
   },
   {
-    role: "Full Stack Developer",
+    role: "Founding Frontend Engineer",
     company: "Lumecs",
-    period: "2024 - 2025",
+    period: "January 2024 – June 2025",
   },
   {
-    role: "Frontend & UI Engineer",
+    role: "Role details to confirm",
     company: "Emerald Gold",
-    period: "2024 · 1 month",
+    period: "Dates to confirm",
+  },
+  {
   },
 ];
 
@@ -141,7 +142,7 @@ export function AboutContent() {
                 {/* Availability Status Indicator */}
                 <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium mb-3">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span>Available for work</span>
+                  <span>Open to remote engineering roles</span>
                 </div>
 
                 <h2 className="text-2xl font-bold uppercase tracking-wider text-white mb-2">
@@ -149,8 +150,7 @@ export function AboutContent() {
                 </h2>
 
                 <p className="text-xs sm:text-sm text-zinc-400 max-w-xs leading-relaxed mb-5">
-                  Create seamless experiences across web, mobile, and desktop
-                  with one codebase.
+                  Full-Stack AI Engineer | AI Systems Engineering · Cotonou, Benin Republic
                 </p>
 
                 {/* Social Icons row */}
@@ -227,38 +227,19 @@ export function AboutContent() {
               </h3>
               <div className="space-y-4 text-sm text-zinc-300 leading-relaxed relative z-10">
                 <p>
-                  I'm a Full-Stack Software Engineer who has built and ship
-                  products used by 10,000+ active users, launched two products,
-                  and worked on software that makes everyday tasks easier for
-                  customers and teams. I care about more than getting something
-                  to work. I care about making it useful, reliable, and worth
-                  coming back to.
+                  I&apos;m a Full-Stack AI Engineer based in Cotonou, Benin Republic, and open to remote engineering opportunities. I have 6,000+ hours of coding experience and have helped ship two commercial products. I enjoy taking a problem from understanding and system design through building, shipping, and improving the product.
                 </p>
                 <p>
-                  What started as
-                  an interest in understanding how software works has grown into
-                  a passion for building products, solving problems, and seeing
-                  the difference good technology can make.
+                  My work has grown from frontend engineering into backend, infrastructure, and AI systems. I&apos;ve contributed to products used by real customers and teams, and that experience shapes how I make technical choices.
                 </p>
                 <p>
-                  I enjoy working on products that have a clear purpose, whether
-                  that&apos;s helping a business run more smoothly, making a
-                  complicated process feel simple, or creating an entirely new
-                  experience for users.
+                  I&apos;m interested in products with a clear purpose: reducing friction for customers, helping teams make sense of complex workflows, or making a useful new experience possible.
                 </p>
                 <p>
-                  I really love building AI-powered products and
-                  business tools that solves a problem. 
-                  I like working across the entire product:
-                  thinking through the experience, designing the architecture,
-                  building the frontend and backend, connecting services, and
-                  making sure everything works together.
+                  My approach is to understand the people and constraints first, design a solution that fits, then build across the frontend, backend, and AI components. I pay attention to how the system behaves after launch so I can improve reliability and usability over time.
                 </p>
                 <p>
-                  I also enjoy taking ownership. I don&apos;t like stopping at
-                  the point where something technically works. I want to
-                  understand how people use it, where they get stuck, what can
-                  be improved, and how to make the product better over time.
+                  I don&apos;t consider a feature finished just because it runs. I want to know whether it helps the people it was built for, where it falls short, and what to improve next.
                 </p>
               </div>
             </motion.div>

@@ -15,19 +15,21 @@ const techStack = [
 
 const experiencesList = [
   {
-    role: 'Full Stack Software Engineer',
+    role: 'Full-Stack AI Engineer',
     company: 'Spinbrite',
-    period: '2024 - Present',
+    period: 'August 2025 – September 2026',
   },
   {
-    role: 'Full Stack Developer',
+    role: 'Founding Frontend Engineer',
     company: 'Lumecs',
-    period: '2024 - 2025',
+    period: 'January 2024 – June 2025',
   },
   {
-    role: 'Frontend & UI Engineer',
+    role: 'Role details to confirm',
     company: 'Emerald Gold',
-    period: '2024 · 1 month',
+    period: 'Dates to confirm',
+  },
+  {
   },
 ];
 
@@ -125,7 +127,7 @@ export function BriefAboutSection() {
                 {/* Status Indicator */}
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium mb-3">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span>Available for work</span>
+                  <span>Open to remote engineering roles</span>
                 </div>
 
                 <h3 className="text-2xl font-bold uppercase tracking-wider text-white mb-2">
@@ -133,7 +135,7 @@ export function BriefAboutSection() {
                 </h3>
 
                 <p className="text-xs sm:text-sm text-zinc-400 max-w-xs leading-relaxed mb-5">
-                  Create seamless experiences across web, mobile, and backend with unified, reliable codebases.
+                  Full-Stack AI Engineer | AI Systems Engineering · Cotonou, Benin Republic
                 </p>
 
                 {/* Social Icons */}
@@ -200,10 +202,10 @@ export function BriefAboutSection() {
                 Hi, I&apos;m Chibueze Williams Obodo.
               </h4>
               <p className="text-sm text-zinc-300 leading-relaxed mb-3 relative z-10">
-                I&apos;m a developer who genuinely enjoys the process of turning an idea into something people can use. What started as an interest in understanding how software works has grown into a passion for building products, solving problems, and seeing the difference good technology can make.
+                I&apos;m a Full-Stack AI Engineer based in Cotonou, Benin Republic. I have 6,000+ hours of coding experience and have helped ship two commercial products. I enjoy taking a problem from understanding and system design through building, shipping, and improving the product.
               </p>
               <p className="text-sm text-zinc-300 leading-relaxed mb-3 relative z-10">
-                I enjoy working on products that have a clear purpose,building AI-powered products and business tools, whether that&apos;s helping a business run more smoothly, making a complicated process feel simple, or creating an entirely new experience for users.
+                My work has grown from frontend engineering into backend, infrastructure, and AI systems. I&apos;m interested in products with a clear purpose: reducing customer friction and making complex workflows easier to use.
               </p>
             </motion.div>
 

@@ -1,20 +1,21 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import { cvDownloadConfig } from '@/data/navigation';
 
 const heroSkillsLeft = [
+  'AI Systems Engineering',
+  'Backend & APIs',
   'Product Development',
-  'API Development',
-  'Database Design',
 ];
 
 const heroSkillsRight = [
-  'Frontend Development',
-  'Backend Development',
-  'Full-Stack Development',
+  'Frontend Engineering',
+  'Infrastructure',
+  'Product Improvement',
 ];
 
 export function HeroIntro() {
@@ -53,10 +54,10 @@ export function HeroIntro() {
         className="text-sm sm:text-base text-zinc-400 leading-relaxed max-w-xl mb-6 space-y-3"
       >
         <p>
-          I&apos;m a Full-Stack Software Engineer who has built and ship products used by 10,000+ active users, launched two products, and worked on software that makes everyday tasks easier for customers and teams.
+          I&apos;m a Full-Stack AI Engineer focused on AI systems engineering. I work from the problem through design, implementation, launch, and improvement, building across AI, backend, frontend, and infrastructure.
         </p>
          <p>
-          I care about more than getting something to work. I care about making it useful, reliable, and worth coming back to.
+          At Spinbrite, I helped build a portal used by 2,000+ customers and support workflows handling 100+ tickets daily. At Lumecs, I contributed to a platform with 10,000+ daily active users. I care about making products useful, reliable, and worth coming back to.
         </p>
 
       </motion.div>
@@ -93,19 +94,19 @@ export function HeroIntro() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="flex flex-wrap items-center gap-4"
       >
-        <a
-          href="/contact"
+        <Link
+          href="/projects"
           className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#FF6A00] text-white font-medium text-sm hover:bg-[#FF8533] transition-all duration-300 shadow-lg shadow-[#FF6A00]/25 group"
         >
-          <span>Let&apos;s Work Together</span>
-        </a>
+          <span>View My Work</span>
+        </Link>
 
         <a
           href={cvDownloadConfig.filePath}
           download={cvDownloadConfig.fileName}
           className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl border border-white/20 bg-white/5 text-white font-medium text-sm hover:border-[#FF6A00] hover:text-[#FF6A00] transition-all duration-300 group"
         >
-          <span>Download My CV</span>
+          <span>Download CV</span>
           <ArrowDown className="w-4 h-4 text-[#FF6A00] group-hover:translate-y-0.5 transition-transform" />
         </a>
       </motion.div>

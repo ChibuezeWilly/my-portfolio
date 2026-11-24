@@ -79,7 +79,7 @@ export function LoadingScreen({ onComplete }: { onComplete?: () => void }) {
             className="mb-8 flex items-center gap-2.5 text-xs font-mono uppercase tracking-[0.3em] text-[#FF6A00]"
           >
             <span className="w-2 h-2 rounded-full bg-[#FF6A00] animate-pulse" />
-            Full-Stack Software Engineer
+            Full-Stack AI Engineer | AI Systems Engineering
           </motion.div>
 
           {/* Animated Name Reveal */}

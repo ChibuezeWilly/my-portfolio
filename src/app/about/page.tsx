@@ -4,7 +4,7 @@ import { AboutContent } from '@/components/about/about-content';
 export const metadata: Metadata = {
   title: 'About Me | Chibueze Williams Obodo',
   description:
-    'Learn more about Chibueze Williams Obodo: full-stack software engineer background, technical philosophy, and engineering experience at Spinbrite and Lumecs.',
+    'Learn about Chibueze Williams Obodo, Full-Stack AI Engineer focused on AI systems engineering, product ownership, and building useful software for real users.',
 };
 
 export default function AboutPage() {

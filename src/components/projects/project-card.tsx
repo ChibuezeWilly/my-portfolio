@@ -2,18 +2,19 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, ExternalLink } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Github } from '@/components/icons';
 import { Project } from '@/types';
 import { ProjectAiButton } from './project-ai-button';
+import { ProjectDemoLink } from './project-demo-link';
 
 interface ProjectCardProps {
   project: Project;
   isFeatured?: boolean;
   onSelect: (project: Project) => void;
   onAskAi: (project: Project) => void;
-  onLearnMore: (project: Project) => void;
 }
 
 export function ProjectCard({
@@ -21,7 +22,6 @@ export function ProjectCard({
   isFeatured = false,
   onSelect,
   onAskAi,
-  onLearnMore,
 }: ProjectCardProps) {
   return (
     <motion.div
@@ -88,16 +88,14 @@ export function ProjectCard({
       {/* Action Buttons */}
       <div className="min-w-0 pt-4 border-t border-white/10 flex flex-col gap-3">
         <div className="flex min-w-0 flex-wrap items-center gap-2">
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onLearnMore(project);
-            }}
+          <Link
+            href={`/projects/${project.slug}`}
+            onClick={(e) => e.stopPropagation()}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs font-medium text-zinc-200 hover:text-white hover:bg-white/10 transition-colors"
           >
             <span>Learn More</span>
             <ArrowRight className="w-3.5 h-3.5" />
-          </button>
+          </Link>
 
           <ProjectAiButton
             onClick={() => onAskAi(project)}
@@ -123,31 +121,7 @@ export function ProjectCard({
               <span>GitHub</span>
             </a>
           )}
-          {project.liveUrl && (
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-[#FF6A00]/40 bg-[#FF6A00]/10 px-3 py-2 text-xs font-semibold text-[#FF9A5C] hover:border-[#FF6A00] hover:bg-[#FF6A00]/20 hover:text-white transition-colors"
-              aria-label="Live Demo Preview"
-            >
-              <ExternalLink className="w-4 h-4" />
-              <span>Live Demo</span>
-            </a>
-          )}
-          {project.backendUrl && (
-            <a
-              href={project.backendUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="inline-flex min-h-9 items-center rounded-lg border border-emerald-400/25 bg-emerald-400/[0.06] px-3 py-2 text-xs font-medium text-emerald-200 hover:border-emerald-300/50 hover:bg-emerald-400/10 transition-colors"
-              aria-label={`${project.name} ${project.backendUrl.includes('github.com') ? 'backend repository' : 'backend server'}`}
-            >
-              {project.backendUrl.includes('github.com') ? 'Backend Repo' : 'Start Backend Server'}
-            </a>
-          )}
+          {project.liveUrl && <div onClick={(e) => e.stopPropagation()}><ProjectDemoLink project={project} className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-[#FF6A00]/40 bg-[#FF6A00]/10 px-3 py-2 text-xs font-semibold text-[#FF9A5C] hover:border-[#FF6A00] hover:bg-[#FF6A00]/20 hover:text-white transition-colors" /></div>}
         </div>
       </div>
     </motion.div>

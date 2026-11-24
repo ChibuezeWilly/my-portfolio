@@ -3,10 +3,11 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowRight, ExternalLink, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Github } from '@/components/icons';
 import { Project } from '@/types';
 import { ProjectAiButton } from './project-ai-button';
+import { ProjectDemoLink } from './project-demo-link';
 
 interface FeaturedProjectProps {
   project: Project;
@@ -48,9 +49,7 @@ export function FeaturedProject({
               <span className="px-3 py-1 rounded-md text-xs font-mono uppercase bg-black/80 backdrop-blur-md text-[#FF6A00] border border-[#FF6A00]/30 font-semibold">
                 FEATURED WORK
               </span>
-              <span className="px-3 py-1 rounded-md text-xs font-mono bg-black/70 backdrop-blur-md text-zinc-300 border border-white/10">
-                {project.year || '2025'}
-              </span>
+              {project.year && <span className="px-3 py-1 rounded-md text-xs font-mono bg-black/70 backdrop-blur-md text-zinc-300 border border-white/10">{project.year}</span>}
             </div>
           </div>
         </div>
@@ -125,30 +124,7 @@ export function FeaturedProject({
                 <span>GitHub</span>
               </a>
             )}
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-[#FF6A00]/40 bg-[#FF6A00]/10 px-4 py-3 text-sm font-semibold text-[#FF9A5C] hover:border-[#FF6A00] hover:bg-[#FF6A00]/20 hover:text-white transition-colors"
-                aria-label="Live Demo Preview"
-              >
-                <ExternalLink className="w-4 h-4" />
-                <span>Live Demo</span>
-              </a>
-            )}
-            {project.backendUrl && (
-              <a
-                href={project.backendUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-emerald-400/25 bg-emerald-400/[0.06] px-4 py-3 text-sm font-medium text-emerald-200 hover:border-emerald-300/50 hover:bg-emerald-400/10 transition-colors"
-                aria-label={`${project.name} ${project.backendUrl.includes('github.com') ? 'backend repository' : 'backend server'}`}
-              >
-                <ExternalLink className="w-4 h-4" />
-                <span>{project.backendUrl.includes('github.com') ? 'Backend Repo' : 'Start Backend Server'}</span>
-              </a>
-            )}
+            {project.liveUrl && <ProjectDemoLink project={project} className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-[#FF6A00]/40 bg-[#FF6A00]/10 px-4 py-3 text-sm font-semibold text-[#FF9A5C] hover:border-[#FF6A00] hover:bg-[#FF6A00]/20 hover:text-white transition-colors" />}
           </div>
         </div>
       </div>

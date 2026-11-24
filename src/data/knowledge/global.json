@@ -1,17 +1,18 @@
 {
   "name": "Chibueze Williams Obodo",
   "fullName": "Chibueze Williams Obodo",
-  "role": "Full-Stack Software Engineer",
+  "role": "Full-Stack AI Engineer | AI Systems Engineering",
   "email": "pricelesswilliams1234@gmail.com",
   "github": "https://github.com/ChibuezeWilly",
-  "bio": "I'm a Full-Stack Developer with a strong passion for creating seamless digital experiences. I enjoy building things that are not only functional but also meaningful.",
+  "location": "Cotonou, Benin Republic",
+  "bio": "I'm a Full-Stack AI Engineer with 6,000+ hours of coding experience. I build products by understanding the problem, designing the system, shipping the solution, and improving it based on how people use it. Open to remote engineering opportunities.",
   "availableForWork": true,
   "statistics": [
     {"value": "2+", "label": "Years of Experience", "icon": "Clock"},
-    {"value": "15+", "label": "Technologies", "icon": "Code"},
+    {"value": "10,000+", "label": "Lumecs Daily Active Users", "icon": "Users"},
     {"value": "6,000+", "label": "Hours of Coding", "icon": "Coffee"},
-    {"value": "6+", "label": "Projects Completed", "icon": "Briefcase"},
+    {"value": "100+", "label": "Spinbrite AI Support Tickets Daily", "icon": "Briefcase"},
     {"value": "2", "label": "Products Launched", "icon": "Rocket"},
-    {"value": "2,000+", "label": "Customers Supported", "icon": "Users"}
+    {"value": "2,000+", "label": "Spinbrite Customers", "icon": "Users"}
   ]
 }

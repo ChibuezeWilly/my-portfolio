@@ -43,6 +43,6 @@ export const socialLinks = [
 
 export const cvDownloadConfig = {
   filePath: '/Main-Resume.pdf',
-  fileName: 'Main-Resume.pdf',
+  fileName: 'Chibueze-Williams-Obodo-CV.pdf',
   label: 'Download CV',
 };

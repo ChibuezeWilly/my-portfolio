@@ -22,9 +22,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Chibueze Williams Obodo | Full-Stack Software Engineer',
+  title: 'Chibueze Williams Obodo | Full-Stack AI Engineer',
   description:
-    "Portfolio of Chibueze Williams Obodo, a Full-Stack Software Engineer specializing in high-performance web applications, scalable backends, and interactive digital products.",
+    'Portfolio of Chibueze Williams Obodo, Full-Stack AI Engineer focused on AI systems engineering, product ownership, and building software for real users.',
   keywords: [
     'Chibueze Williams Obodo',
     'Full-Stack Developer',
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
   authors: [{ name: 'Chibueze Williams Obodo' }],
   creator: 'Chibueze Williams Obodo',
   openGraph: {
-    title: 'Chibueze Williams Obodo | Full-Stack Software Engineer',
+    title: 'Chibueze Williams Obodo | Full-Stack AI Engineer',
     description:
-      'I Understand, Code & Solve Problems. Discover projects, technical architecture, and interactive AI assistant.',
+      'I Understand, Build & Solve Real Problems. Explore product case studies and engineering work.',
     url: 'https://chibuezewilliams.dev',
     siteName: 'Chibueze Williams Obodo Portfolio',
     locale: 'en_US',

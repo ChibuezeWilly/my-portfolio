@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getProjectBySlug, projects } from '@/data/projects';
-import { ProjectsShowcase } from '@/components/projects/projects-showcase';
+import { ProjectCaseStudy } from '@/components/projects/project-case-study';
 
 export function generateStaticParams() {
   return projects.map((p) => ({
@@ -41,7 +41,7 @@ export default async function ProjectDetailPage({
 
   return (
     <main className="flex-1 flex min-w-0 max-w-full flex-col w-full">
-      <ProjectsShowcase initialProject={project} />
+      <ProjectCaseStudy project={project} />
     </main>
   );
 }

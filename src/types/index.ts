@@ -11,6 +11,7 @@ export interface Project {
   technologies: string[];
   githubUrl?: string | null;
   backendUrl?: string | null;
+  backendRepoUrl?: string | null;
   liveUrl?: string | null;
   problem: string;
   solution: string;

@@ -50,7 +50,7 @@ export function ProjectsShowcase({ initialProject = projects[0] }: ProjectsShowc
           Selected Work
         </h1>
         <p className="text-base sm:text-lg text-zinc-400 leading-relaxed">
-          A collection of projects that reflect my passion for solving problems and building meaningful digital products.
+          Products and experiments shaped around a specific problem. Open a case study for the workflow, available evidence, and direct source and demo links.
         </p>
       </div>
 
@@ -87,7 +87,6 @@ export function ProjectsShowcase({ initialProject = projects[0] }: ProjectsShowc
                     isFeatured={project.id === selectedProject.id}
                     onSelect={handleSelectProject}
                     onAskAi={(p) => handleOpenAi(p, 'chat')}
-                    onLearnMore={(p) => handleOpenAi(p, 'overview')}
                   />
                 ))}
               </div>
@@ -112,7 +111,6 @@ export function ProjectsShowcase({ initialProject = projects[0] }: ProjectsShowc
                 isFeatured={project.id === selectedProject.id}
                 onSelect={handleSelectProject}
                 onAskAi={(p) => handleOpenAi(p, 'chat')}
-                onLearnMore={(p) => handleOpenAi(p, 'overview')}
               />
             ))}
           </div>

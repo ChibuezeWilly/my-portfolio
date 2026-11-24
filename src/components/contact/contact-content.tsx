@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Send, CheckCircle2, AlertCircle, ArrowUpRight, Sparkles } from 'lucide-react';
 import { Github } from '@/components/icons';
-import { socialLinks } from '@/data/navigation';
 
 export function ContactContent() {
   const [formData, setFormData] = useState({
@@ -95,7 +94,7 @@ export function ContactContent() {
               <div className="flex-1 min-w-0">
                 <p className="text-xs font-mono uppercase text-zinc-500">Email Address</p>
                 <p className="text-sm font-semibold text-white truncate group-hover:text-[#FF6A00] transition-colors">
-                  pricelesswilliams@gmail.com
+                  pricelesswilliams1234@gmail.com
                 </p>
               </div>
               <ArrowUpRight className="w-4 h-4 text-zinc-500 group-hover:text-white transition-colors" />
@@ -126,7 +125,7 @@ export function ContactContent() {
               Current Availability
             </div>
             <p className="text-xs text-zinc-300 leading-relaxed">
-              Available for full-time engineering roles, high-impact contract projects, and technical advisory.
+              Available for full-time remote engineering roles and selected product development opportunities.
             </p>
           </div>
         </motion.div>

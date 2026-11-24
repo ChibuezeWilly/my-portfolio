@@ -24,12 +24,12 @@ PROJECT KNOWLEDGE:
 ${JSON.stringify(project || {}, null, 2)}
 
 GLOBAL PORTFOLIO KNOWLEDGE:
-Owner: Chibueze Williams Obodo (Full-Stack Software Engineer)
+Owner: Chibueze Williams Obodo (Full-Stack AI Engineer | AI Systems Engineering)
 Email: pricelesswilliams1234@gmail.com
 GitHub: https://github.com/ChibuezeWilly
 Experience:
-- Spinbrite (Full-Stack Engineer, Aug 2025 – Sep 2026): Command center, customer portal, AI customer support workflows.
-- Lumecs (Founding Frontend Engineer, Jan 2024 – Jun 2025): Web3 quest platform, scaled to 1,500+ DAU.
+- Spinbrite (Full-Stack AI Engineer, Aug 2025 – Sep 2026): Operations dashboard and customer portal used by 2,000+ customers; 50% less manual handling; 70% lower customer wait times; AI support workflows handled 100+ tickets daily.
+- Lumecs (Founding Frontend Engineer, Jan 2024 – Jun 2025): Three-person team building a Web3 quest platform, with work across frontend, backend, and infrastructure; 10,000+ daily active users.
 
 STRICT ACCURACY RULES:
 1. You are an AI assistant representing Chibueze Williams Obodo's portfolio. Never claim to be Chibueze Williams Obodo himself.

@@ -1,11 +1,74 @@
 {
   "categories": [
-    {"name": "Frontend", "technologies": ["JavaScript", "TypeScript", "React", "Next.js", "HTML", "CSS", "Tailwind CSS"]},
-    {"name": "Backend", "technologies": ["Python", "FastAPI", "Node.js", "REST APIs"]},
-    {"name": "Databases", "technologies": ["PostgreSQL", "Redis", "MongoDB", "Prisma"]},
-    {"name": "Authentication", "technologies": ["JWT", "OAuth", "Firebase Authentication"]},
-    {"name": "Deployment", "technologies": ["Vercel", "Docker", "Git", "GitHub Actions"]},
-    {"name": "Payments", "technologies": ["Stripe", "PayPal"]},
-    {"name": "Other", "technologies": ["LangGraph"]}
+    {
+      "name": "AI Systems & Agent Engineering",
+      "technologies": [
+        "Python",
+        "LangGraph",
+        "LLM Workflows",
+        "Retrieval-Augmented Generation",
+        "LLM Evaluation",
+        "Human-in-the-Loop"
+      ]
+    },
+    {
+      "name": "Backend & API Engineering",
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "Node.js",
+        "REST APIs",
+        "WebSockets",
+        "Webhooks",
+        "Background Jobs"
+      ]
+    },
+    {
+      "name": "Frontend & Product Engineering",
+      "technologies": [
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "HTML",
+        "CSS",
+        "Tailwind CSS",
+        "Zustand"
+      ]
+    },
+    {
+      "name": "Data, Retrieval & Databases",
+      "technologies": [
+        "PostgreSQL",
+        "Redis",
+        "Neo4j",
+        "ChromaDB",
+        "Pinecone",
+        "Database Design",
+        "Data Modelling",
+        "BM25 & Vector Search"
+      ]
+    },
+    {
+      "name": "Infrastructure, Testing & Reliability",
+      "technologies": [
+        "Docker",
+        "GitHub Actions",
+        "CI/CD",
+        "Pytest",
+        "ARQ",
+        "Langfuse",
+        "Application Monitoring"
+      ]
+    },
+    {
+      "name": "Integrations & Application Safety",
+      "technologies": [
+        "API Integration",
+        "Input Validation",
+        "Rate Limiting",
+        "Human Approval Workflows"
+      ]
+    }
   ]
 }

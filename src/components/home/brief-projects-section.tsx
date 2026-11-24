@@ -4,10 +4,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { projects } from '@/data/projects';
 import { ProjectAiButton } from '@/components/projects/project-ai-button';
 import { openProjectAi } from '@/lib/project-ai-events';
+import { ProjectDemoLink } from '@/components/projects/project-demo-link';
 
 export function BriefProjectsSection() {
   const operonProject = projects.find((p) => p.id === 'operon') || projects[0];
@@ -83,11 +84,6 @@ export function BriefProjectsSection() {
                       </p>
                     </div>
 
-                    <div className="flex flex-col sm:items-end flex-shrink-0">
-                      <span className="font-mono text-xs font-semibold text-[#FF6A00] bg-[#FF6A00]/10 border border-[#FF6A00]/30 px-3 py-1 rounded-full whitespace-nowrap">
-                        October 2026
-                      </span>
-                    </div>
                   </div>
 
                   <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-white/5">
@@ -109,8 +105,7 @@ export function BriefProjectsSection() {
               <div className="relative z-10 mt-4 flex flex-wrap items-center justify-between gap-3">
                 <div className="flex flex-wrap gap-3 text-xs">
                   {operonProject.githubUrl && <a href={operonProject.githubUrl} target="_blank" rel="noopener noreferrer" className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 font-medium text-zinc-200 hover:border-white/25 hover:bg-white/[0.08]">GitHub ↗</a>}
-                  {operonProject.liveUrl && <a href={operonProject.liveUrl} target="_blank" rel="noopener noreferrer" className="rounded-lg border border-[#FF6A00]/40 bg-[#FF6A00]/10 px-3 py-2 font-semibold text-[#FF9A5C] hover:border-[#FF6A00] hover:bg-[#FF6A00]/20">Live Demo ↗</a>}
-                  {operonProject.backendUrl && <a href={operonProject.backendUrl} target="_blank" rel="noopener noreferrer" className="rounded-lg border border-emerald-400/25 bg-emerald-400/[0.06] px-3 py-2 font-medium text-emerald-200 hover:border-emerald-300/50 hover:bg-emerald-400/10">Start Backend Server ↗</a>}
+                  {operonProject.liveUrl && <ProjectDemoLink project={operonProject} className="rounded-lg border border-[#FF6A00]/40 bg-[#FF6A00]/10 px-3 py-2 font-semibold text-[#FF9A5C] hover:border-[#FF6A00] hover:bg-[#FF6A00]/20" />}
                 </div>
                 <ProjectAiButton
                   onClick={() => openProjectAi(operonProject, 'overview')}
@@ -147,13 +142,10 @@ export function BriefProjectsSection() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                       </div>
 
-                      <div className="flex items-start justify-between gap-2 mb-2">
+                      <div className="mb-2">
                         <h4 className="text-xl font-bold uppercase tracking-wide text-white group-hover:text-[#FF6A00] transition-colors">
                           {project.name}
                         </h4>
-                        <span className="font-mono text-xs text-zinc-400 whitespace-nowrap">
-                          October 2026
-                        </span>
                       </div>
 
                       <p className="text-xs text-zinc-400 leading-relaxed mb-4 line-clamp-2">
@@ -176,8 +168,7 @@ export function BriefProjectsSection() {
 
                       <div className="flex flex-wrap gap-2 text-[10px]">
                         {project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="rounded-md border border-white/10 bg-white/[0.04] px-2.5 py-1.5 font-medium text-zinc-200 hover:border-white/25 hover:bg-white/[0.08]">GitHub ↗</a>}
-                        {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="rounded-md border border-[#FF6A00]/40 bg-[#FF6A00]/10 px-2.5 py-1.5 font-semibold text-[#FF9A5C] hover:border-[#FF6A00] hover:bg-[#FF6A00]/20">Live Demo ↗</a>}
-                        {project.backendUrl && <a href={project.backendUrl} target="_blank" rel="noopener noreferrer" className="rounded-md border border-emerald-400/25 bg-emerald-400/[0.06] px-2.5 py-1.5 font-medium text-emerald-200 hover:border-emerald-300/50 hover:bg-emerald-400/10">{project.backendUrl.includes('github.com') ? 'Backend Repo' : 'Start Backend Server'} ↗</a>}
+                        {project.liveUrl && <ProjectDemoLink project={project} className="rounded-md border border-[#FF6A00]/40 bg-[#FF6A00]/10 px-2.5 py-1.5 font-semibold text-[#FF9A5C] hover:border-[#FF6A00] hover:bg-[#FF6A00]/20" />}
                       </div>
 
                       {/* Project AI assistant */}

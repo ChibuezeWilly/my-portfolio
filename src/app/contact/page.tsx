@@ -4,7 +4,7 @@ import { ContactContent } from '@/components/contact/contact-content';
 export const metadata: Metadata = {
   title: "Let's Build Something Amazing | Contact Chibueze Williams Obodo",
   description:
-    'Get in touch with Chibueze Williams Obodo for full-stack software development, architectural consulting, and high-impact digital products.',
+    'Contact Chibueze Williams Obodo about remote Full-Stack AI Engineer roles and selected product development opportunities.',
 };
 
 export default function ContactPage() {

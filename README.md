@@ -1,6 +1,6 @@
-# Chibueze Williams Full-Stack Developer Portfolio
+# Chibueze Williams Obodo Full-Stack AI Engineer Portfolio
 
-A modern, highly responsive, multi-page portfolio website for **Chibueze Williams**, Full-Stack Software Engineer, engineered with Next.js 16 (App Router), TypeScript, Tailwind CSS, Framer Motion, and a project-aware AI assistant.
+A responsive, multi-page portfolio for **Chibueze Williams Obodo**, Full-Stack AI Engineer focused on AI systems engineering. Built with Next.js 16 (App Router), TypeScript, Tailwind CSS, Framer Motion, and a project-aware AI assistant.
 
 ---
 
@@ -11,27 +11,27 @@ A modern, highly responsive, multi-page portfolio website for **Chibueze William
    - `/about` — About Me: Framed profile card with live availability indicator, verified biography, tech stack preview, and professional experience timeline (Spinbrite & Lumecs).
    - `/skills` — My Tech Toolbox: 7 categorized skill sections with interactive filtering, glassmorphic badges, and ambient lighting.
    - `/projects` — Selected Work: Dynamic interactive project showcase with animated layout transitions.
-   - `/projects/[slug]` — Dynamic project showcase with pre-selected project exploration.
+   - `/projects/[slug]` — Project case studies with workflows and direct demo and source links.
    - `/contact` — Contact: Direct channels (Email, GitHub) and validated form with AgentMail integration and mailto fallback.
 
 2. **Project-Aware AI Assistant**:
    - Integrated into the `/projects` page.
    - Smooth desktop two-panel split (60% showcase, 40% AI assistant) with full-screen overlay on mobile.
    - Grounded strictly in structured JSON knowledge (`src/data/knowledge/`).
-   - Strict unknown-information policy with fallback: *"I don't have a verified answer to that. You can reach Chibueze directly and ask him about it."* and direct message action.
+   - Strict unknown-information policy with fallback: *"I don't have a verified answer to that. You can reach Chibueze Williams Obodo directly and ask him about it."* and direct message action.
    - Multi-provider abstraction: Meta Llama 3.1 8B Instruct (Hugging Face) as primary, Google Gemini as fallback, and built-in local deterministic token streaming when API keys are not supplied.
 
 3. **Design System & Aesthetics**:
    - **Dark Theme** (default): Cinematic near-black (`#080808`), vibrant orange accents (`#FF6A00`), glassmorphic panels, and subtle ambient glows.
    - **Light Theme**: Sophisticated off-white (`#F5F6F8`), soft cream surfaces (`#FAF8F4`), and electric blue accents (`#315FE8`).
    - Decorative dotted matrix patterns in hero corners.
-   - Name-based animated introduction loading sequence (`CHIBUEZE WILLIAMS`).
+   - Name-based animated introduction loading sequence (`CHIBUEZE WILLIAMS OBODO`).
    - WhatsApp-inspired fixed bottom navigation bar on mobile (no hamburger menu).
    - Real resume PDF download at `/Chibueze-Williams-Obodo-CV.pdf`.
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
 ### 1. Clone & Install Dependencies
 
@@ -50,6 +50,16 @@ cp .env.example .env.local
 ```
 
 Populate the variables:
+
+```env
+# AI Providers (Optional — defaults to internal deterministic streamer if unset)
+HUGGINGFACE_API_KEY=your_huggingface_key
+HUGGINGFACE_MODEL=meta-llama/Meta-Llama-3.1-8B-Instruct
+GEMINI_API_KEY=your_gemini_api_key
+GEMINI_MODEL=gemini-1.5-flash
+
+# Contact / Email Integration (Optional)
+AGENTMAIL_API_KEY=your_agentmail_key
 
 # Public Site URL
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
@@ -133,13 +143,4 @@ src/
     └── index.ts                       # TypeScript interfaces
 ```
 
----
-
-## 🔒 Security & Privacy
-- Server-side rate limiting on both `/api/ai/chat` and `/api/contact/send`.
-- Client input is strictly validated and sanitized before forwarding to AI models or email processors.
-- Strict unknown information policy ensures the AI never hallucinates undocumented credentials, employment, or project achievements.
-
----
-
-**Designed & Built by Chibueze Williams.**
+**Designed & Built by Chibueze Williams Obodo.**
